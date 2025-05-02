@@ -1,4 +1,4 @@
-"""Module for Exnova API."""
+"""Module for exnova API."""
 
 import time
 import json
@@ -60,6 +60,7 @@ from exnovaapi.ws.chanels.sell_option import Sell_Option
 from exnovaapi.ws.chanels.sell_digital_option import Sell_Digital_Option
 from exnovaapi.ws.chanels.change_tpsl import Change_Tpsl
 from exnovaapi.ws.chanels.change_auto_margin_call import ChangeAutoMarginCall
+from exnovaapi.ws.chanels.buy_blitz_option import BuyBlitzOption
 
 from exnovaapi.ws.objects.timesync import TimeSync
 from exnovaapi.ws.objects.profile import Profile
@@ -84,7 +85,7 @@ requests.packages.urllib3.disable_warnings()  # pylint: disable=no-member
 
 
 class ExnovaAPI(object):  # pylint: disable=too-many-instance-attributes
-    """Class for communication with Exnova API."""
+    """Class for communication with exnova API."""
 
     # pylint: disable=too-many-public-methods
     socket_option_opened = {}
@@ -671,6 +672,16 @@ class ExnovaAPI(object):  # pylint: disable=too-many-instance-attributes
     @property
     def sell_digital_option(self):
         return Sell_Digital_Option(self)
+
+    @property
+    def buy_blitz_option(self):
+        """Property for get exnova websocket buy blitz option chanel.
+
+        :returns: The instance of :class:`BuyBlitzOption
+            <exnovaapi.ws.chanels.buy_blitz_option.BuyBlitzOption>`.
+        """
+        return BuyBlitzOption(self)
+
 # ____________________for_______digital____________________
 
     def get_digital_underlying(self):
