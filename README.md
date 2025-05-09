@@ -1,5 +1,9 @@
 # README - Documentação da API Exnova
 
+<p align="center">
+  <img src="https://play-lh.googleusercontent.com/4h8vya6TOaY6Rbo7BCp0Smm5yTdtTZQSC3qMqmu1S7pM5vLYwGhKbnwMtOTr2qA_lrE" alt="Logo Exnova API" width="200">
+</p>
+
 Este arquivo contém a documentação dos métodos disponíveis na classe `Exnova` e exemplos de como utilizá-los.
 
 ## Classe Principal
